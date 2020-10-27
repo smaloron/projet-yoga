@@ -4,6 +4,8 @@ CREATE DATABASE yoga DEFAULT CHARACTER SET utf8mb4;
 
 USE yoga;
 
+SET foreign_key_checks = 0;
+
 CREATE TABLE adresses (
 	id INT UNSIGNED AUTO_INCREMENT,
     rue VARCHAR(38) NOT NULL,
@@ -79,5 +81,5 @@ CREATE TABLE cours_participation (
     CONSTRAINT participation_to_cours 
         FOREIGN KEY (id_cours) REFERENCES cours(id)
 );
-
+SET foreign_key_checks = 1;
 
